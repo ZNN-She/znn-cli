@@ -5,17 +5,11 @@ const webpack = require('webpack');
 const {merge} = require('webpack-merge');
 const baseConfig = require('./base.config.js');
 const devConfig = {
-    mode: "production",
-    plugins: [
-
-    ]
+    mode: "production"
 };
 
 
 const webpackConfig = merge(baseConfig, devConfig);
 
-const compiler = webpack(webpackConfig);
+module.exports = webpackConfig;
 
-compiler.run((err, stat) => {
-    // console.log(err, stat)
-});
